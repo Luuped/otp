@@ -1,4 +1,16 @@
 #OTP
+
+## Description
+This package provides a simple implementation of the Time-based One-Time Password (TOTP) algorithm as specified in [RFC 6238](https://tools.ietf.org/html/rfc6238).
+
+## Installation
+
+To install, use the `go get` command:
+
+```sh
+go get -u github.com/Luuped/otp
+```
+
 ## Documentation
 ```go
 package main
@@ -31,15 +43,6 @@ func main() {
     fmt.Println("Is OTP valid?", valid)
 }
 ```
-
-## Installation
-
-To install, use the `go get` command:
-
-```sh
-go get -u github.com/Luuped/otp
-```
-
 
 ## License
 This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
