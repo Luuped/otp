@@ -12,6 +12,11 @@ type TOTP struct {
 	Interval int64
 }
 
+// NewDefaultTOTP creates a new TOTP instance with default values.
+func NewDefaultTOTP(secret string) (*TOTP, error) {
+	return NewTOTP(secret, 6, sha1.New, "", "", 30)
+}
+
 // NewTOTP creates a new TOTP instance.
 func NewTOTP(secret string, digits int, digest func() hash.Hash, name string, issuer string, interval int64) (*TOTP, error) {
 	if digest == nil {
